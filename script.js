@@ -383,9 +383,9 @@ function showPrintPreview() {
         <div class="footer">
           <p>© 2024 Croxton Technologies. All rights reserved.</p>
         </div>
-        <div class="no-print">
-          <button onclick="window.print()">Print</button>
-          <button onclick="savePDF()">Save as PDF</button>
+        <div class="no-print" style="text-align: center; margin-top: 20px;">
+          <button onclick="window.print()" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; margin: 5px; cursor: pointer;">Print</button>
+          <button onclick="savePDF()" style="background-color: #2196F3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; margin: 5px; cursor: pointer;">Save as PDF</button>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
         <script>
