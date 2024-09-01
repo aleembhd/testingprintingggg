@@ -285,7 +285,7 @@ function generatePrintableTable(data) {
   let currentDate = '';
   data.forEach(log => {
     const date = new Date(log.timestamp);
-    const dateString = date.toLocaleDateString();
+    const dateString = date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
     const highlightClass = dateString !== currentDate ? 'highlight' : '';
     currentDate = dateString;
 
@@ -319,8 +319,8 @@ function generatePrintableTable(data) {
 function showPrintPreview() {
   const filteredData = filterData();
   const printContent = generatePrintableTable(filteredData);
-  const startDate = document.getElementById('startDate').value;
-  const endDate = document.getElementById('endDate').value;
+  const startDate = new Date(document.getElementById('startDate').value).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+  const endDate = new Date(document.getElementById('endDate').value).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
 
   // Open a new window for the print preview
   const printWindow = window.open('', '_blank');
